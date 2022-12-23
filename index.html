@@ -55,6 +55,30 @@
 			color: white;
 			font-family: 'Poppins', sans-serif;
 		}
+		.details{
+			margin-top: 1%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.details button {
+			font-size: 1.5rem;
+			letter-spacing: .1rem;
+			color: white;
+			font-family: 'Poppins', sans-serif;
+			background-color: rgba(0,0,0,0.2);
+			border: 0;
+			width: 90%;
+			margin-top: 2rem;
+			color: white;
+			font-size: 2.5vm;
+			padding: 2%;
+			transition: 0.3s;
+			margin-bottom: 3%;}
+
+		.details button:hover{
+			background-color: rgba(0, 0, 0,0.4);
+			transform: scale(1.023);}
 	</style>
 </head>
 <body>
@@ -62,8 +86,7 @@
 		<img src="static/images/esakki.jpg" alt="" id="dp">
 		<span id="name">Esakkidurai</span>
 		<span id="bio">All Is Well</span>
-		<div class="contacts">
-			
+		<div class="contacts">			
 			<a href="https://www.linkedin.com/in/esakkidurai-r/"><i class="bi-linkedin"></i></a>
 			<a href="https://github.com/esakki-durai/"><i class="bi bi-github"></i></a>
 			<a href="mailto: r.esakkiduraip@gmail.com"><i class="bi-envelope"></i></a>
@@ -71,8 +94,15 @@
 			<a href="https://www.youtube.com/@esakkidurai9363"><i class="bi bi-youtube"></i></a>
 		</div>
 		<div class="details">
-
+			<button id="res">Resume</button>
+			<button id="pro">Projects</button>
 		</div>
 	</div>
+	<script type="text/javascript">
+		document.getElementById('res').onclick=function(){
+			location.href="resume.html";};
+		document.getElementById('pro').onclick=function(){
+			location.href="project.html";};
+	</script>
 </body>
 </html>
