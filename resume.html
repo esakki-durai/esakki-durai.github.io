@@ -9,206 +9,205 @@
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 	<style type="text/css">
-
-		/* Ensure the profile card adjusts on smaller screens */
-@media (max-width: 768px) {
-    .fir0 {
-        width: 90%;
-        margin: 2rem auto;
-        padding: 15px;
-        text-align: center;
-    }
-
-    #dp {
-        width: 8rem;
-        height: 8rem;
-        border-width: 4px;
-    }
-
-    #name {
-        font-size: 40px;
-        letter-spacing: 5px;
-    }
-
-    #pos {
-        font-size: 16px;
-        letter-spacing: 4px;
-    }
-
-    .contactss {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    .contactss a {
-        font-size: 1.2em;
-    }
-}
-
-/* Further adjustments for smaller mobile screens */
-@media (max-width: 480px) {
-    .fir0 {
-        padding: 10px;
-    }
-
-    #name {
-        font-size: 32px;
-        letter-spacing: 3px;
-    }
-
-    #pos {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-
-    .contactss {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .contactss a {
-        font-size: 1em;
-    }
-}
-
-		i {
-			font-size: 1.5em;
+		/* Base Styles */
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			color: whitesmoke;
 		}
 
 		body {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			align-items: center;
 			background-image: url('static/images/bg.jpg');
 			background-attachment: fixed;
 			background-repeat: no-repeat;
 			background-size: cover;
+			padding: 20px;
+		}
+
+		/* Profile Section */
+		.fir0 {
+			width: 90%;
+			max-width: 60rem;
+			margin: 2rem auto;
+			padding: 20px;
+			border-radius: 1rem;
+			background-color: rgba(0, 0, 0, 0.4);
+			text-align: center;
+		}
+
+		#dp {
+			width: 10rem;
+			height: 10rem;
+			border-radius: 50%;
+			border: 6px solid rgba(255, 25, 25, 0.9);
+			margin: 1rem auto;
 		}
 
 		#name {
 			font-family: 'console', sans-serif;
-			margin: 0;
-			letter-spacing: 10px;
-			font-size: 60px;
-			margin-bottom: 0;
-
+			font-size: 2.5rem;
+			letter-spacing: 4px;
+			margin: 1rem 0;
 		}
 
 		#pos {
 			font-family: 'console', sans-serif;
-			letter-spacing: 9px;
-			margin: 0;
-		}
-
-		#dp {
-			margin-top: 1rem;
-			width: 10rem;
-			height: auto;
-			border-radius: 90%;
-			border: 6px solid rgba(255, 25, 25, 1.9);
-		}
-
-		.fir0 {
-			margin: 30px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 1rem;
-			margin: 3rem;
-			width: 60rem;
-			align-items: center;
-			flex-direction: column;
-			background-color: rgba(0, 0, 0, 0.4);
-			padding: 20px;
+			font-size: 1.2rem;
+			letter-spacing: 3px;
+			margin-bottom: 1rem;
 		}
 
 		.contactss {
-			padding-top: 1.2em;
 			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-			width: 100%;
+			justify-content: center;
+			gap: 1.5rem;
+			flex-wrap: wrap;
+			padding: 1rem 0;
 		}
 
-		* {
-			color: whitesmoke;
+		.contactss a {
+			font-size: 1.5rem;
 		}
 
+		/* Academic Section */
 		.me2 {
-			flex-direction: column;
-			font-family: 'Roboto', sans-serif;
-			text-align: center;
 			display: grid;
-			grid-template-columns: 33.33% 33.33% 33.33%;
-			background-color: rgba(0, 0, 0, 0.4);
-			padding: 40px;
-			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+			padding: 2rem;
 		}
 
-		.me22 h1 {
-			flex-direction: column;
-			text-align: center;
-			font-family: 'Roboto', sans-serif;
-			margin: 0;
-			font-size: 60px;
-		}
-
-		.me22 {
-			border-radius: 1rem;
-			margin: 3rem;
-			width: 60rem;
-			align-items: center;
-			flex-direction: column;
-			background-color: rgba(0, 0, 0, 0.4);
-			padding: 20px;
-			display: grid;
-			padding: 5px;
-			margin-top: 1%;
-			display: flex;
-			justify-content: safe center;
-		}
-
-		#heading h1 {
-			display: flex;
-			flex-direction: column;
-			padding: 5px;
-			font-size: 55px;
+		.me2 img {
+			width: 100%;
+			max-width: 200px;
 			height: auto;
+			margin: 1rem 0;
 		}
 
-		.me2232 .langs {
-			border: 1px solid rgba(0, 0, 0, 0.1);
-		}
-
-		.me2232 .langs h3 {
-			font-size: 1vw;
-		}
-
-		.me2232 .langs img {
-			margin-top: 1.2vh;
-		}
-
+		/* Skills Section */
 		.me2232 {
-			font-family: 'Roboto', sans-serif;
-			text-align: center;
 			display: grid;
-			grid-template-columns: 16.6666666667% 16.6666666667% 16.6666666667% 16.6666666667% 16.6666666667% 16.6666666667%;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			gap: 1.5rem;
+			padding: 1rem;
+		}
+
+		.langs img {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+		}
+
+		/* Achievements Section */
+		.a1 {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			padding: 1rem;
+		}
+
+		.aaa {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 0.5rem;
+		}
+
+		/* Media Queries */
+		@media (max-width: 768px) {
+			#name {
+				font-size: 2rem;
+			}
+
+			#pos {
+				font-size: 1rem;
+			}
+
+			.me2232 {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		@media (max-width: 480px) {
+			#name {
+				font-size: 1.8rem;
+				letter-spacing: 2px;
+			}
+
+			#pos {
+				font-size: 0.9rem;
+			}
+
+			.me2232 {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.contactss {
+				gap: 1rem;
+			}
+
+			.me2 {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.me33 {
+			width: 90%;
+			max-width: 60rem;
+			margin: 2rem auto;
+			padding: 2rem;
+			background-color: rgba(0, 0, 0, 0.4);
+			border-radius: 1rem;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		}
 
 		.me33 h1 {
 			text-align: center;
 			font-family: 'Roboto', sans-serif;
-			margin: 0;
-			font-size: 1.5vw;
+			font-size: 2rem;
+			color: hwb(0 94% 4%);
+			margin-bottom: 2rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid rgba(248, 245, 245, 0.3);
 		}
 
-		.me3 .a2 h2,
-		.me3 .a2 h3,
-		.me3 .a2 b {
-			color: white;
+		/* For section content containers */
+		.me33 .content {
+			display: grid;
+			gap: 1.5rem;
+			padding: 1rem;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.me33 {
+				width: 95%;
+				padding: 1.5rem;
+			}
+
+			.me33 h1 {
+				font-size: 1.75rem;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.me33 {
+				margin: 1rem auto;
+				padding: 1rem;
+			}
+
+			.me33 h1 {
+				font-size: 1.5rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.me33 .content {
+				gap: 1rem;
+			}
 		}
 	</style>
 
@@ -227,7 +226,7 @@
 				<a href="https://www.instagram.com/esakkidurai_murugan/"><i class="bi-instagram"></i></a>
 				<a href="https://www.youtube.com/@esakkidurai9363"><i class="bi bi-youtube"></i></a>
 				<a href="mailto: r.esakkiduraip@gmail.com"><i class="bi-envelope"></i></a>
-				<a href="tel: 919894634748"><i class="bi-envelope"></i></a>
+				<a href="tel:91984634748"><i class="bi-telephone"></i></a>
 
 			</div>
 		</div>
@@ -263,108 +262,109 @@
 		</div>
 		<div class="me2232">
 			<div class="langs">
-				<img src="static/images/python.jpg" alt="" width="100px" height="100px">
+				<img src="static/images/python.jpg" alt="">
 				<h3>Python Core</h3>
 			</div>
 			<div class="langs">
-				<img src="static/images/c.jpg" alt="" width="100px" height="100px">
+				<img src="static/images/c.jpg" alt="">
 				<h3>C Programming</h3>
 			</div>
 			<div class="langs">
-				<img src="static/images/java.jpg" alt="" width="100px" height="100px">
+				<img src="static/images/java.jpg" alt="">
 				<h3>Core Java</h3>
 			</div>
 			<div class="langs">
-				<img src="static/images/html.jpg" alt="" width="100px" height="100px">
+				<img src="static/images/html.jpg" alt="">
 				<h3>html</h3>
 			</div>
 			<div class="langs">
-				<img src="static/images/css.jpg" alt="" width="100px" height="100px">
+				<img src="static/images/css.jpg" alt="">
 				<h3>css</h3>
 			</div>
 			<div class="langs">
-				<img src="static/images/js.jpg" alt="" width="100px" height="100px">
+				<img src="static/images/js.jpg" alt="">
 				<h3>Java script</h3>
 			</div>
 		</div>
+	</div>
 
+	<div class="me33">
+		<div id="heading">
+			<h1 class="h11">ACHIEVEMENTS</h1>
+		</div>
 		<div class="me33">
-			<div id="heading">
-				<h1 class="h11">ACHIEVEMENTS</h1>
-			</div>
-			<div class="me33">
-				<div class="a1">
-					<div class="desc">
-						<div class="a1">
-							<div class="desc">
-								<div class="aaa">
-									<img src="static/images/win.webp" alt="" width="50px" height="50px">
-									<h2><b>1st prize maths and sceincein school level competition .</b></h2>
-								</div>
-								<h3>Appreciated with Award for good performance in <b>Proficiency</b> </h3>
+			<div class="a1">
+				<div class="desc">
+					<div class="a1">
+						<div class="desc">
+							<div class="aaa">
+								<img src="static/images/win.webp" alt="" width="50px" height="50px">
+								<h2><b>1st prize maths and sceincein school level competition .</b></h2>
 							</div>
-							<h3 class="year">JAN 2017</h3>
+							<h3>Appreciated with Award for good performance in <b>Proficiency</b> </h3>
 						</div>
-						<div class="a1">
-							<div class="desc">
-								<div class="aaa">
-									<img src="static/images/win.webp" alt="" width="50px" height="50px">
-									<h2><b>1st prize technical quiz in PSN engineering college Hackathon.</b></h2>
-								</div>
-		
-								<h3>Recognized by college </h3>
+						<h3 class="year">JAN 2017</h3>
+					</div>
+					<div class="a1">
+						<div class="desc">
+							<div class="aaa">
+								<img src="static/images/win.webp" alt="" width="50px" height="50px">
+								<h2><b>1st prize technical quiz in PSN engineering college Hackathon.</b></h2>
 							</div>
-							<h3 class="year">FEB 2022</h3>
+
+							<h3>Recognized by college </h3>
 						</div>
-						<div class="a1">
-							<div class="desc">
-								<div class="aaa">
-									<img src="static/images/win.webp" alt="" width="50px" height="50px">
-									<h2><b>II Prizes in Paper Presentation , Web Designing, Code Debugging</b></h2>
-								</div>
-								<h3>Rohini College of Engineering, Kanyakumari,<b>National Level Technical Symposium</b>
-								</h3>
+						<h3 class="year">FEB 2022</h3>
+					</div>
+					<div class="a1">
+						<div class="desc">
+							<div class="aaa">
+								<img src="static/images/win.webp" alt="" width="50px" height="50px">
+								<h2><b>II Prizes in Paper Presentation , Web Designing, Code Debugging</b></h2>
 							</div>
-							<h3 class="year">MAR 2022</h3>
+							<h3>Rohini College of Engineering, Kanyakumari,<b>National Level Technical Symposium</b>
+							</h3>
 						</div>
-						<div class="a1">
-							<div class="desc">
-								<div class="aaa">
-									<img src="static/images/win.webp" alt="" width="50px" height="50px">
-									<h2><b>II Prizes in Tamill speech in my school</b></h2>
-								</div>
-								<h3>Sokkalal hr sec school,mukkudal</h3>
+						<h3 class="year">MAR 2022</h3>
+					</div>
+					<div class="a1">
+						<div class="desc">
+							<div class="aaa">
+								<img src="static/images/win.webp" alt="" width="50px" height="50px">
+								<h2><b>II Prizes in Tamill speech in my school</b></h2>
 							</div>
-							<h3 class="year">DEC 2018</h3>
+							<h3>Sokkalal hr sec school,mukkudal</h3>
 						</div>
+						<h3 class="year">DEC 2018</h3>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
-						<div class="me33">
-							<div id="heading">
-								<h1 class="h11">INDUSTRIAL VISIT</h1>
+	<div class="me33">
+		<div id="heading">
+			<h1 class="h11">INDUSTRIAL VISIT</h1>
+		</div>
+		<div class="me3">
+			<div class="a1">
+				<div class="desc">
+					<div class="a1">
+						<div class="desc">
+							<div class="aaa">
+								<img src="static/images/win2.jpg" alt="" width="50px" height="50px">
+								<h2><b>Industrial visit arranged by my college</b></h2>
 							</div>
-							<div class="me3">
-								<div class="a1">
-									<div class="desc">
-										<div class="a1">
-											<div class="desc">
-												<div class="aaa">
-													<img src="static/images/win2.jpg" alt="" width="50px" height="50px">
-													<h2><b>Industrial visit arranged by my college</b></h2>
-												</div>
-												<h3>INFOTECH,Tiruvandrum </h3>
-											</div>
-											<h3 class="year">DEC 2020</h3>
-										</div>
-									</div>
-								</div>
-							</div>
+							<h3>INFOTECH,Tiruvandrum </h3>
 						</div>
+						<h3 class="year">DEC 2020</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 
