@@ -1,146 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Esakkidurai</title>
+	<title>Esakki Durai | Software Engineer</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	<style>
+		:root {
+			--bg: #f3f6fb;
+			--card: #ffffff;
+			--text: #0f172a;
+			--muted: #475569;
+			--primary: #2563eb;
+			--primary-dark: #1d4ed8;
+			--border: #e2e8f0;
+			--shadow: 0 16px 40px rgba(15, 23, 42, 0.09);
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
 		body {
-			background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
-			font-family: 'Poppins', sans-serif;
-			padding: 20px;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			padding: 24px;
+			font-family: "Inter", sans-serif;
+			background:
+				radial-gradient(circle at 10% 10%, #e2e8f0 0, rgba(226, 232, 240, 0) 35%),
+				radial-gradient(circle at 90% 20%, #dbeafe 0, rgba(219, 234, 254, 0) 35%),
+				var(--bg);
+			color: var(--text);
 		}
 
-		.card-custom {
-			max-width: 500px;
-			margin: auto;
-			background: #ffffffcc;
-			border-radius: 1.5rem;
-			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-			padding: 2.5rem 2rem;
-			text-align: center;
-			backdrop-filter: blur(10px);
-			animation: fadeIn 0.8s ease;
+		.portfolio-card {
+			width: min(720px, 100%);
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 18px;
+			box-shadow: var(--shadow);
+			padding: 34px 30px;
 		}
 
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-				transform: translateY(20px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
+		.profile {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
 		}
 
 		.profile-img {
-			width: 140px;
-			height: 140px;
+			width: 112px;
+			height: 112px;
 			border-radius: 50%;
 			object-fit: cover;
-			border: 5px solid #ff7eb3;
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			border: 3px solid #dbeafe;
 		}
 
-		.name-title {
-			font-size: 2rem;
-			font-weight: 700;
-			background: linear-gradient(90deg, #ff7eb3, #ff65a3, #7afcff);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+		h1 {
+			font-size: 1.85rem;
+			font-weight: 800;
+			letter-spacing: 0.2px;
 		}
 
-		.tagline {
-			font-size: 1.1rem;
-			color: #444;
-			margin-bottom: 1rem;
-		}
-
-		.socials i {
-			font-size: 1.6rem;
-			background: #ffffff;
-			padding: 10px;
-			border-radius: 12px;
-			margin: 0 .4rem;
-			transition: .3s;
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-			color: #ff65a3;
-		}
-
-		.socials i:hover {
-			transform: translateY(-6px) scale(1.15);
-			background: #ff65a3;
-			color: #fff;
-		}
-
-		.btn-custom {
-			width: 100%;
-			padding: .9rem;
-			margin-top: 1rem;
-			font-size: 1.1rem;
-			border-radius: 10px;
+		.role {
+			margin-top: 5px;
+			color: var(--muted);
 			font-weight: 600;
-			letter-spacing: .5px;
-			transition: 0.3s;
+		}
+
+		.about {
+			margin: 20px 0 22px;
+			font-size: 0.98rem;
+			line-height: 1.65;
+			color: #1f2937;
+		}
+
+		.contact-row {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			margin-bottom: 18px;
+		}
+
+		.contact-pill {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 8px 12px;
+			border: 1px solid var(--border);
+			border-radius: 999px;
+			color: #334155;
+			font-size: 0.9rem;
+		}
+
+		.contact-pill i {
+			color: var(--primary);
+		}
+
+		.socials {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		.socials a {
+			width: 42px;
+			height: 42px;
+			display: inline-grid;
+			place-items: center;
+			border-radius: 10px;
+			border: 1px solid var(--border);
+			color: var(--primary);
+			transition: 0.18s ease;
+		}
+
+		.socials a:hover {
+			background: var(--primary);
+			color: #ffffff;
+			transform: translateY(-2px);
+		}
+
+		.actions {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+			gap: 10px;
+			margin-top: 22px;
+		}
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			padding: 11px 14px;
+			border-radius: 10px;
+			border: 1px solid transparent;
+			font-size: 0.95rem;
+			font-weight: 600;
+			text-decoration: none;
+			cursor: pointer;
 		}
 
 		.btn-primary {
-			background: linear-gradient(90deg, #ff7eb3, #ff65a3);
-			border: none;
+			background: var(--primary);
+			color: #fff;
 		}
 
 		.btn-primary:hover {
-			background: linear-gradient(90deg, #ff65a3, #ff4081);
-			transform: translateY(-3px);
-			box-shadow: 0 8px 20px rgba(255, 64, 129, 0.3);
+			background: var(--primary-dark);
 		}
 
-		.btn-outline-primary {
-			border: 2px solid #ff65a3;
-			color: #ff65a3;
+		.btn-outline {
+			border-color: var(--border);
+			color: #1e293b;
+			background: #fff;
 		}
 
-		.btn-outline-primary:hover {
-			background: #ff65a3;
-			color: #fff;
-			transform: translateY(-3px);
-			box-shadow: 0 8px 20px rgba(255, 64, 129, 0.3);
+		.btn-outline:hover {
+			border-color: #bfdbfe;
+			background: #eff6ff;
 		}
 	</style>
 </head>
-
 <body>
-	<div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
-		<div class="card-custom p-4">
-			<img src="static/images/esakki.JPG" class="profile-img mb-3" alt="Profile" />
-
-			<h3 class="fw-bold mb-5">Esakkidurai</h3>
-
-			<div class="socials mb-4">
-				<a href="https://www.linkedin.com/in/esakkidurai-r/"><i class="bi bi-linkedin"></i></a>
-				<a href="https://github.com/esakki-durai/"><i class="bi bi-github"></i></a>
-				<a href="mailto:r.esakkiduraip@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-				<a href="tel:+919894634748"><i class="bi bi-telephone-fill"></i></a>
-				<a href="https://www.instagram.com/esakkidurai_murugan/"><i class="bi bi-instagram"></i></a>
-				<a href="https://www.youtube.com/@esakkidurai9363"><i class="bi bi-youtube"></i></a>
+	<main class="portfolio-card">
+		<div class="profile">
+			<img src="static/images/esakki.JPG" class="profile-img" alt="Esakki Durai profile photo" />
+			<div>
+				<h1>Esakki Durai</h1>
+				<p class="role">Software Engineer</p>
 			</div>
-
-			<button class="btn btn-primary btn-custom" onclick="location.href='resume.html'">View Resume</button>
-			<button class="btn btn-outline-primary btn-custom">Projects</button>
-			<button class="btn btn-primary btn-custom" onclick="location.href='Esakki Durai Resume.pdf'">Download Resume
-				PDF</button>
 		</div>
-	</div>
 
-	</div>
-	</div>
+		<p class="about">
+			Software Engineer at Care Data Informatics (Mar 23, 2026 - Present), with experience building and delivering web applications using Angular, C#, ASP.NET Core, SQL Server, and MySQL. Focused on clean implementation, cross-team collaboration, and reliable outcomes for finance and enterprise software products.
+		</p>
+
+		<div class="contact-row">
+			<span class="contact-pill"><i class="bi bi-globe2"></i> esakki-durai.github.io</span>
+			<a class="contact-pill" href="tel:+919894634748"><i class="bi bi-telephone"></i> +91 98946 34748</a>
+			<a class="contact-pill" href="mailto:r.esakkiduraip@gmail.com"><i class="bi bi-envelope"></i> r.esakkiduraip@gmail.com</a>
+		</div>
+
+		<div class="socials">
+			<a href="https://www.linkedin.com/in/esakkidurai-r/" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+			<a href="https://github.com/esakki-durai/" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+			<a href="https://www.instagram.com/esakkidurai_murugan/" aria-label="Instagram profile"><i class="bi bi-instagram"></i></a>
+			<a href="https://www.youtube.com/@esakkidurai9363" aria-label="YouTube channel"><i class="bi bi-youtube"></i></a>
+		</div>
+
+		<div class="actions">
+			<a class="btn btn-primary" href="resume.html"><i class="bi bi-file-earmark-person"></i> View Resume</a>
+			<a class="btn btn-outline" href="Esakki Durai Resume.pdf"><i class="bi bi-download"></i> Download PDF</a>
+		</div>
+	</main>
 </body>
-
 </html>

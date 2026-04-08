@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Esakkidurai — Resume</title>
+	<title>Esakki Durai — Resume</title>
 
 	<!-- Icons + Font -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
@@ -57,8 +57,8 @@
 
 		.name-spaced {
 			font-weight: 800;
-			letter-spacing: 14px;
-			font-size: 22px;
+			letter-spacing: 6px;
+			font-size: 28px;
 			color: #111827;
 			margin-bottom: 8px;
 		}
@@ -259,43 +259,10 @@
 			color: var(--muted)
 		}
 
-		/* ================= ACHIEVEMENTS ================ */
-		.achievement {
-			display: flex;
-			gap: 12px;
-			margin-bottom: 16px;
-		}
-
-		.achievement img {
-			width: 50px;
-			height: 50px;
-			border-radius: 10px;
-			object-fit: cover;
-		}
-
-		.ach-title {
-			font-weight: 700;
-			font-size: 15px;
-			color: #111827
-		}
-
-		.ach-desc {
-			font-size: 14px;
-			color: var(--muted);
-			margin-top: 4px
-		}
-
-		.ach-date {
-			font-size: 13px;
-			font-weight: 600;
-			color: var(--accent);
-			margin-top: 6px
-		}
-
 		@media(max-width:520px) {
 			.name-spaced {
-				letter-spacing: 6px;
-				font-size: 18px
+				letter-spacing: 3px;
+				font-size: 20px
 			}
 
 			.contact-pill {
@@ -312,27 +279,28 @@
 
 		<!-- HEADER -->
 		<header class="header">
-			<div class="name-spaced">E S A K K I D U R A I</div>
-			<div class="role">Software Developer</div>
+			<div class="name-spaced">ESAKKI DURAI</div>
+			<div class="role">Software Engineer</div>
 
 			<div class="contact-row">
 				<div class="contact-pill">
 					<i class="bi bi-telephone"></i>
-					9894634748
+					<a href="tel:+919894634748">+91 98946 34748</a>
 				</div>
 				<div class="contact-pill">
 					<i class="bi bi-link-45deg"></i>
-					esakki-durai.github.io
+					<a href="https://esakki-durai.github.io">esakki-durai.github.io</a>
 				</div>
 				<div class="contact-pill">
 					<i class="bi bi-envelope"></i>
-					r.esakkiduraip@gmail.com
+					<a href="mailto:r.esakkiduraip@gmail.com">r.esakkiduraip@gmail.com</a>
 				</div>
 			</div>
 
 			<div class="header-actions">
-				<button class="btn-primary" onclick="location.href='/mnt/data/Esakki Durai Resume.pdf'">Download
+				<button class="btn-primary" onclick="location.href='Esakki Durai Resume.pdf'">Download
 					PDF</button>
+				<button class="btn-outline" onclick="location.href='index.html'">Portfolio Home</button>
 				<button class="btn-outline" onclick="window.print()">Print</button>
 			</div>
 		</header>
@@ -342,14 +310,7 @@
 			<!-- ABOUT -->
 			<section class="card">
 				<div class="section-title">ABOUT ME</div>
-				<p class="section-sub">
-					Full Stack Developer with solid experience in designing, developing, and deploying web applications.
-					Skilled in Angular, HTML, CSS, SQL and Bootstrap with strong focus on team collaboration and
-					delivering
-					impactful results. Adaptable, reliable, and effective in meeting changing project needs while
-					ensuring
-					high-quality outcomes.
-				</p>
+				<p class="section-sub">Software Engineer at Care Data Informatics with professional experience in designing, developing, and deploying web applications. Proficient in Angular, C#, ASP.NET Core, SQL Server, MySQL, HTML, CSS, and Bootstrap. Strong focus on team collaboration, adaptability, and delivering reliable, high-quality solutions that meet evolving business needs.</p>
 			</section>
 
 			<!-- WORK EXPERIENCE -->
@@ -359,18 +320,30 @@
 				<div class="experience-item">
 					<div class="exp-head">
 						<div>
-							<div class="exp-role">Full Stack Developer</div>
-							<div class="exp-org">Vcidex Solution Pvt. Ltd., Chennai</div>
+							<div class="exp-role">Software Engineer</div>
+							<div class="exp-org">Care Data Informatics</div>
 						</div>
-						<div class="exp-dates">MAR 2023 — CURRENT</div>
+						<div class="exp-dates">Mar 23, 2026 — Present</div>
 					</div>
 
 					<div class="exp-desc">
-						<strong>Frontend Development:</strong> Developed responsive, user-friendly web applications
-						using Angular for seamless cross-platform performance.<br><br>
-						<strong>Backend Development:</strong> Created robust APIs using C# to handle business logic and
-						complex processing.<br><br>
-						<strong>Database Management:</strong> Designed and optimized databases using MySQL & SQL Server.
+						Currently working as a Software Engineer, contributing to web application development and delivery across frontend, backend, and database layers.
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="exp-head">
+						<div>
+							<div class="exp-role">Full Stack Developer</div>
+							<div class="exp-org">Vcidex Solution Pvt. Ltd., Chennai</div>
+						</div>
+						<div class="exp-dates">Mar 2023 — Mar 2026</div>
+					</div>
+
+					<div class="exp-desc">
+						<strong>Frontend Development:</strong> Built responsive, user-friendly Angular applications with Bootstrap for smooth cross-platform usage.<br><br>
+						<strong>Backend Development:</strong> Developed and maintained C# services and APIs to support core business logic and workflows.<br><br>
+						<strong>Database Management:</strong> Designed and optimized SQL Server and MySQL schemas and queries for performance and reliability.
 					</div>
 				</div>
 			</section>
@@ -385,8 +358,7 @@
 						<h4>Supply Chain Finance (SCF)</h4>
 						<div class="proj-tech">Angular, C#, MySQL</div>
 						<div class="proj-desc">
-							Bill discounting system with two flows (receivables & dealer). Multi-portal architecture
-							built for financial institutions.
+							SCF solution for bill discounting with receivables and dealer flows. Built multiple stakeholder portals to support disbursement and repayment operations.
 						</div>
 					</div>
 
@@ -394,7 +366,7 @@
 						<h4>Loan Origination System (LOS)</h4>
 						<div class="proj-tech">Angular, ASP.NET Core, SQL Server</div>
 						<div class="proj-desc">
-							Streamlined loan processing workflow, automated validations, improved customer experience.
+							Developed a Loan Origination System to streamline application processing, improve data accuracy, and enhance customer experience.
 						</div>
 					</div>
 
@@ -402,7 +374,7 @@
 						<h4>Collection Tracker</h4>
 						<div class="proj-tech">Angular, C#, MySQL</div>
 						<div class="proj-desc">
-							Loan due-amount tracking software with customer onboarding & loan status mapping.
+							Developed loan collection software with customer onboarding, loan registration, and due tracking per account.
 						</div>
 					</div>
 
@@ -410,8 +382,7 @@
 						<h4>Enterprise Resource Planning (ERP)</h4>
 						<div class="proj-tech">Angular, C#, MySQL</div>
 						<div class="proj-desc">
-							Storyboard ERP with modules: Purchase, Inventory, Assets, HR, Payroll. Migration from VB.NET
-							to Angular.
+							Contributed to ERP migration from ASP.NET (VB.NET) to Angular, covering purchase, inventory, assets, HR, and payroll modules.
 						</div>
 					</div>
 
@@ -425,14 +396,14 @@
 				<div style="margin-bottom:10px">
 					<strong>Zadarma API — Telecalling</strong>
 					<p class="section-sub" style="margin-top:4px">
-						Implemented virtual-number based calling using Zadarma API & dial-pad widget in Angular.
+						Integrated virtual number-based telecalling in an Angular application using the Zadarma API and dial-pad widget.
 					</p>
 				</div>
 
 				<div>
 					<strong>Perfios API — KYC Verification</strong>
 					<p class="section-sub" style="margin-top:4px">
-						Automated KYC verification with Perfios API for secure document validation.
+						Implemented secure and automated KYC document verification using the Perfios API.
 					</p>
 				</div>
 			</section>
@@ -461,73 +432,19 @@
 					<div>
 						<div class="edu-title">Bachelor of Engineering — CSE</div>
 						<div class="edu-sub">Einstein College of Engineering (2019–2023)</div>
-						<div class="edu-sub">CGPA: 75%</div>
 					</div>
 
 					<div>
 						<div class="edu-title">Higher Secondary</div>
 						<div class="edu-sub">Sokkalal Hr Sec School (2018–2019)</div>
-						<div class="edu-sub">Maths & Biology — 53%</div>
 					</div>
 
 					<div>
 						<div class="edu-title">SSLC</div>
 						<div class="edu-sub">Sokkalal Hr Sec School (2016–2017)</div>
-						<div class="edu-sub">State Board — 85%</div>
 					</div>
 
 				</div>
-			</section>
-
-			<!-- ACHIEVEMENTS & INDUSTRIAL VISIT -->
-			<section class="card">
-				<div class="section-title">ACHIEVEMENTS & INDUSTRIAL VISIT</div>
-
-				<div class="achievement">
-					<img src="static/images/win.webp">
-					<div>
-						<div class="ach-title">1st Prize — Maths & Science</div>
-						<div class="ach-desc">Awarded for proficiency and academic excellence.</div>
-						<div class="ach-date">JAN 2017</div>
-					</div>
-				</div>
-
-				<div class="achievement">
-					<img src="static/images/win.webp">
-					<div>
-						<div class="ach-title">1st Prize — Technical Quiz</div>
-						<div class="ach-desc">Recognized in PSN Engineering College Hackathon.</div>
-						<div class="ach-date">FEB 2022</div>
-					</div>
-				</div>
-
-				<div class="achievement">
-					<img src="static/images/win.webp">
-					<div>
-						<div class="ach-title">Prizes — Paper Presentation, Web Designing, Debugging</div>
-						<div class="ach-desc">National Level Technical Symposium — Rohini College.</div>
-						<div class="ach-date">MAR 2022</div>
-					</div>
-				</div>
-
-				<div class="achievement">
-					<img src="static/images/win.webp">
-					<div>
-						<div class="ach-title">II Prize — Tamil Speech</div>
-						<div class="ach-desc">Awarded at Sokkalal Hr Sec School.</div>
-						<div class="ach-date">DEC 2018</div>
-					</div>
-				</div>
-
-				<div class="achievement">
-					<img src="static/images/win2.jpg">
-					<div>
-						<div class="ach-title">Industrial Visit — INFOTECH, Trivandrum</div>
-						<div class="ach-desc">Learned enterprise workflow & development lifecycle.</div>
-						<div class="ach-date">DEC 2020</div>
-					</div>
-				</div>
-
 			</section>
 
 		</main>
